@@ -1,3 +1,14 @@
 
 # ignore exe file
 *exe
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# ignore .o file
+*.o
