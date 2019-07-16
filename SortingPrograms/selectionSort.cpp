@@ -19,30 +19,28 @@ void print(int arr[],int size){
     cout<<endl;
     
 }
-//Longest is out
+//Smallest is out
     
-void bubbleSort(int arr[],int size){
+void selectionSort(int arr[],int size){
     
-    for (int i=0 ; i<size ; ++i){
-        for (int j=0 ; j < size - i ; ++j){
+    for (int i=0 ; i<size -1 ; ++i){
+        for (int j=i+1 ; j < size ; ++j){
             
-            if(arr[j] > arr[j+1]) {
-                swap(arr[j],arr[j+1]);
+            if(arr[i] > arr[j]) {
+                swap(arr[i],arr[j]);
             }
-            
-        }        
+        } 
     }
-    
 }
 
 int main(){
 
 int arr[]={ 4,5,6,7,8,9,0,23,12,45,10,6};
 int n = sizeof(arr)/sizeof(arr[0]);
-cout <<"Before Bubble sort" <<endl;
+cout <<"Before selection sort : " <<endl;
 print(arr,n);
-cout <<"After Bubble sort " <<endl;
-bubbleSort(arr,n);
+cout <<"After selection sort : " <<endl;
+selectionSort(arr,n);
 print(arr,n);
 
 }
